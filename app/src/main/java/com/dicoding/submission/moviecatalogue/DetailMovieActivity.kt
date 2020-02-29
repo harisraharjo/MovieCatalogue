@@ -53,7 +53,6 @@ class DetailMovieActivity : AppCompatActivity() {
         if (supportActionBar != null){
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -63,22 +62,14 @@ class DetailMovieActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun ratingTextBg(rating: Int){
-
-    }
-
     private fun generateGenreText(genres: List<String>){
         val linearLayoutGenre = findViewById<LinearLayout>(R.id.linearLayoutGenre_detailMovie)
         val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT)
         params.marginEnd = 8
 
-        var backColId = 0
-        var textColId = 0
-
-//        val unwrappedDrawable = AppCompatResources.getDrawable(this,R.drawable.rounded_corners)
-//        val wrappedDrawable = DrawableCompat.wrap(unwrappedDrawable!!);
-//        DrawableCompat.setTint(wrappedDrawable, Color.RED);
+        var backColId: Int
+        var textColId: Int
 
         for (genre in genres){
             val genreText = TextView(this)
@@ -88,9 +79,7 @@ class DetailMovieActivity : AppCompatActivity() {
             genreText.setPadding(4,4,4,4)
             genreText.layoutParams = params
 
-//                color
             val getCol = getGenreColor(genre)
-
             when (getCol) {
                 "red" -> {
                     backColId = R.color.redMbulak
@@ -105,7 +94,6 @@ class DetailMovieActivity : AppCompatActivity() {
                     textColId = R.color.easyGreen
                 }
             }
-
             genreText.setBackgroundColor(getColor(backColId))
             genreText.setTextColor(getColor(textColId))
         }
@@ -118,7 +106,6 @@ class DetailMovieActivity : AppCompatActivity() {
             "DRAMA", "COMEDY",  "FAMILY", "ANIMATION" -> "green"
             else -> "red"
         }
-
         return color
     }
 
