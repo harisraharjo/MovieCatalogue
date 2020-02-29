@@ -1,6 +1,5 @@
 package com.dicoding.submission.moviecatalogue
 
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Layout.JUSTIFICATION_MODE_INTER_WORD
@@ -8,14 +7,13 @@ import android.util.TypedValue
 import android.view.MenuItem
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.appcompat.content.res.AppCompatResources
 import androidx.appcompat.widget.Toolbar
-import androidx.core.graphics.drawable.DrawableCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.dicoding.submission.moviecatalogue.model.Cast
+import com.dicoding.submission.moviecatalogue.model.Movie
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail_movie.*
-import kotlin.math.roundToInt
 
 class DetailMovieActivity : AppCompatActivity() {
 
@@ -101,7 +99,7 @@ class DetailMovieActivity : AppCompatActivity() {
 
     private fun getGenreColor(genre: String): String{
         val tGenre = genre.toUpperCase()
-        var color = when (tGenre){
+        val color = when (tGenre){
             "SCI-FI","CRIME", "FANTASY" -> "blue"
             "DRAMA", "COMEDY",  "FAMILY", "ANIMATION" -> "green"
             else -> "red"

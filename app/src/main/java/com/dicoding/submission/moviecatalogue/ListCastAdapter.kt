@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.dicoding.submission.moviecatalogue.model.Cast
 import com.squareup.picasso.Picasso
 
 class ListCastAdapter(private val listCast: List<Cast>): RecyclerView.Adapter<ListCastAdapter.ListViewHolder>() {

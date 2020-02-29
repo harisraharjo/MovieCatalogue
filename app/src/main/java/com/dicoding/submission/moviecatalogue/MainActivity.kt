@@ -4,6 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.dicoding.submission.moviecatalogue.model.Movie
+import com.dicoding.submission.moviecatalogue.recyclerViewPackage.MovieListAdapter
+import com.dicoding.submission.moviecatalogue.utility.MovieUtil
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -18,7 +21,11 @@ class MainActivity : AppCompatActivity() {
         toolbar.title = ("Movies List")
         setSupportActionBar(toolbar)
 
-        val customListAdapter = MovieListAdapter(this,movieData)
+        val customListAdapter =
+            MovieListAdapter(
+                this,
+                movieData
+            )
         listView.adapter = customListAdapter
 
         listView.setOnItemClickListener(){adapterView, view, position, id ->
