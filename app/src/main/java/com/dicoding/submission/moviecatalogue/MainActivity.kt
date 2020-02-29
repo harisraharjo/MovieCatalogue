@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
 
         listView.setOnItemClickListener(){adapterView, view, position, id ->
             val itemAtPos = adapterView.getItemAtPosition(position)
-//            val itemIdAtPos = adapterView.getItemIdAtPosition(position)
             val intent = Intent(baseContext, DetailMovieActivity::class.java)
             if (itemAtPos is Movie) {
                 intent.putExtra("movieData", itemAtPos)

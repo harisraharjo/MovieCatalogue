@@ -35,13 +35,6 @@ class ListCastAdapter(private val listCast: List<Cast>): RecyclerView.Adapter<Li
 
         holder.cast_realname.text = cast.realname
         holder.cast_moviename.text = cast.moviename
-
-//        Picasso.get().load(movie.posterId)
-//            .transform(RoundedCornersTransformation(35, 0))
-//            .centerCrop()
-//            .fit()
-//            .placeholder(R.drawable.ic_launcher_background)
-//            .into(viewHolder.image)
     }
 
 
