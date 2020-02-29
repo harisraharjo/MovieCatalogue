@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#17181c</color>
+    <color name="colorPrimaryDark">#000010</color>
+
+    <color name="colorAccent">#332e56</color>
+    <!--    191C36-->
+    <!--    3F51B5-->
+    <!--    008577-->
+<!--    24213e-->
+<!--    17181c-->
+
+<!--    00574B /GREEEN Default primary dark-->
+<!--    424360 /accent edit1-->
+<!--    000010-->
+
+
+
+    <color name="white">#ffffff</color>
+
+    <color name="redMbulak">#442723</color>
+    <color name="blueMbulak">#163C46</color>
+    <color name="greenMbulak">#1B3D32</color>
+
+    <color name="easyRed">#FF3709</color>
+    <color name="easyBlue">#03ACCA</color>
+    <color name="easyGreen">#1AAE6F</color>
+
+</resources>

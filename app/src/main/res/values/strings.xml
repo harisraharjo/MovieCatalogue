@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Movie Catalogue</string>
+
+    <string name="dummy_title">Dummy Title</string>
+    <string name="duration_txt">Duration</string>
+    <string name="dummy_duration">2h 2m</string>
+    <string name="releasedate_txt">Year</string>
+    <string name="dummy_releaseDate">2018</string>
+    <string name="genre_txt">Genre</string>
+    <string name="dummyGenre_txtView">Adventure</string>
+    <string name="title_activity_child">DetailMovie</string>
+    <string name="rating_txt">Rating</string>
+    <string name="dummy_rating">83%</string>
+    <string name="poster_detail_contentDescription">poster detail</string>
+    <string name="dummy_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut elit leo. Donec mollis tortor at elementum vulputate. Phasellus quis ullamcorper nibh. Nulla consequat neque vel nulla fermentum porta id ultricies lectus. Duis tempor leo odio, nec porttitor nibh aliquam ac. Proin nec augue eu urna consequat convallis. Nunc ultrices nulla et varius sagittis. Sed pretium pellentesque mauris sit amet eleifend. In maximus, dolor sit amet condimentum porta, lorem justo viverra dolor, eu iaculis massa justo et orci.</string>
+    <string name="synopsis_txt">Synopsis</string>
+    <string name="cast_txtView">Top Billed Cast</string>
+    <string name="director_txtVIew">Director</string>
+</resources>

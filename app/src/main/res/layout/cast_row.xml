@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="140dp"
+        android:layout_height="190dp"
+        android:src="@drawable/ahmed"
+        android:scaleType="centerCrop"
+        android:id="@+id/castDetail_imageVIew"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="0dp"
+        android:id="@+id/cast_realname"
+        tools:text="Ahmed"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cast_moviename"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="0dp"
+        tools:text="Riot"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
