@@ -1,12 +1,8 @@
 <resources>
 
-    <string name="duration_txt" >Duration</string>
     <string name="dummy_duration" translatable="false">2h 2m</string>
     <string name="releasedate_txt" >Year</string>
     <string name="dummy_releaseDate" translatable="false">2018</string>
-    <string name="genre_txt" >Genre</string>
-    <string name="dummyGenre_txtView" translatable="false">Adventure</string>
-    <string name="rating_txt" >Rating</string>
     <string name="dummy_rating" translatable="false">83%</string>
     <string name="poster_detail_contentDescription" >poster detail</string>
     <string name="dummy_description" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut elit leo. Donec mollis tortor at elementum vulputate. Phasellus quis ullamcorper nibh. Nulla consequat neque vel nulla fermentum porta id ultricies lectus. Duis tempor leo odio, nec porttitor nibh aliquam ac. Proin nec augue eu urna consequat convallis. Nunc ultrices nulla et varius sagittis. Sed pretium pellentesque mauris sit amet eleifend. In maximus, dolor sit amet condimentum porta, lorem justo viverra dolor, eu iaculis massa justo et orci.</string>
@@ -17,9 +13,6 @@
     <string name="settings_menu">Settings</string>
     <string name="season">Season</string>
     <string name="current_season_label">Current Season</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="tab_text_1">Movies</string>
     <string name="tab_text_2">Tv Series</string>
