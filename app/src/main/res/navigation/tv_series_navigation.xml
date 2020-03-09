@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_series_navigation"
+    app:startDestination="@id/tvSeriesDest">
+
+    <fragment
+        android:id="@+id/tvSeriesDest"
+        android:name="com.dicoding.submission.moviecatalogue.modules.TvSeriesFragment"
+        android:label="fragment_tv_series"
+        tools:layout="@layout/tv_series_fragment" >
+        <argument
+            android:name="tab_number2"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_tvSeriesFragment_to_detailMovieActivity2"
+            app:destination="@id/detailMovieActivity2" />
+        <action
+            android:id="@+id/action_tvSeriesDest_to_settingsFragment2"
+            app:destination="@id/settingsDest2" />
+    </fragment>
+    <activity
+        android:id="@+id/detailMovieActivity2"
+        android:name="com.dicoding.submission.moviecatalogue.DetailMovieActivity"
+        android:label="activity_detail_movie"
+        tools:layout="@layout/activity_detail_movie" >
+        <argument
+            android:name="tvData"
+            app:argType="com.dicoding.submission.moviecatalogue.model.TvShow" />
+        <argument
+            android:name="layoutId"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </activity>
+    <dialog
+        android:id="@+id/settingsDest2"
+        android:name="com.dicoding.submission.moviecatalogue.modules.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

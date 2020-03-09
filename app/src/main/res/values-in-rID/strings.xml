@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="duration_txt" >Durasi</string>
+    <string name="releasedate_txt" >Tahun</string>
+    <string name="genre_txt" >Kategori</string>
+    <string name="rating_txt" >Nilai</string>
+    <string name="synopsis_txt">Ringkasan</string>
+    <string name="poster_detail_contentDescription" >detil poster</string>
+    <string name="cast_txtView">Pemain Berbayar Teratas</string>
+    <string name="director_txtVIew">Sutradara</string>
+    <string name="creator_txtView">Pembuat</string>
+    <string name="settings_menu">Pengaturan</string>
+    <string name="season">Musim</string>
+    <string name="current_season_label">Musim Saat Ini</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="tab_text_1">Bioskop</string>
+    <string name="tab_text_2">Serial Tv</string>
+    <string name="language">Bahasa</string>
+    <string name="movie_catalogue">Katalog Film</string>
+    <string name="english_rb">English</string>
+    <string name="indonesia_rb">Indonesia</string>
+
+    <!--    <string-array name="tabs_name">-->
+    <!--        <item>@string/tab_text_1</item>-->
+    <!--        <item>@string/tab_text_2</item>-->
+    <!--    </string-array>-->
+
+</resources>

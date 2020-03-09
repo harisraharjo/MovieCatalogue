@@ -1,33 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <androidx.cardview.widget.CardView
         android:layout_width="140dp"
         android:layout_height="190dp"
-        android:scaleType="centerCrop"
-        android:id="@+id/castDetail_imageVIew"/>
+        android:id="@+id/cardview_cast_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="2dp"
+        android:clipToPadding="false"
+        app:cardCornerRadius="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/castDetail_imageVIew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@color/white" />
+
+    </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="0dp"
         android:id="@+id/cast_realname"
-        tools:text="Ahmed"/>
-
-    <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="0dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/cardview_cast_image"
+        app:layout_constraintTop_toBottomOf="@+id/cardview_cast_image"
+        tools:text="Ahmed" />
+
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/cast_moviename"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="0dp"
-        tools:text="Riot"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/cast_realname"
+        app:layout_constraintTop_toBottomOf="@id/cast_realname"
+        tools:text="Riot" />
 
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

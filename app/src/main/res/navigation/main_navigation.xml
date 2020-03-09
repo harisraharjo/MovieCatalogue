@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/moviesDest">
+
+    <fragment
+        android:id="@+id/moviesDest"
+        android:name="com.dicoding.submission.moviecatalogue.modules.MoviesFragment"
+        android:label="fragment_movies"
+        tools:layout="@layout/movies_fragment" >
+        <action
+            android:id="@+id/action_movie_detail"
+            app:destination="@id/detailMovieActivity" />
+        <action
+            android:id="@+id/action_settings"
+            app:destination="@id/settingsDest" />
+    </fragment>
+    <activity
+        android:id="@+id/detailMovieActivity"
+        android:name="com.dicoding.submission.moviecatalogue.DetailMovieActivity"
+        android:label="activity_detail_movie"
+        tools:layout="@layout/activity_detail_movie" >
+
+        <argument
+            android:name="movieData"
+            app:argType="com.dicoding.submission.moviecatalogue.model.Movie" />
+        <argument
+            android:name="layoutId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </activity>
+    <dialog
+        android:id="@+id/settingsDest"
+        android:name="com.dicoding.submission.moviecatalogue.modules.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>

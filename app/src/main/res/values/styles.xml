@@ -1,8 +1,5 @@
 <resources>
-
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -10,9 +7,26 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
-<!--    CollapsingToolbarLayout expandedTitleTextAppearence-->
     <style name="TransparentText" parent="@android:style/TextAppearance">
         <item name="android:textColor">#00000000</item>
+    </style>
+
+    <style name="hyperlink" >
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/bottom_background</item>
+    </style>
+
+    <style name="TextAppearance.Design.CollapsingToolbar.Expanded.Shadow">
+        <item name="android:textSize">18sp</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowRadius">8</item>
+        <item name="android:shadowColor">@android:color/black</item>
+    </style>
+
+    <style name="FullscreenDialogTheme" parent="Theme.MaterialComponents.DialogWhenLarge">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/Animation.AppCompat.Dialog</item>
     </style>
 
 </resources>

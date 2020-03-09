@@ -1,69 +1,40 @@
 package com.dicoding.submission.moviecatalogue.recyclerViewPackage
 
-import android.app.Activity
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.ImageView
-import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.submission.moviecatalogue.R
 import com.dicoding.submission.moviecatalogue.model.Movie
 import com.squareup.picasso.Picasso
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
-import java.util.*
-import kotlin.collections.ArrayList
 
-class MovieListAdapter(private val context: Activity,private val movies: ArrayList<Movie>)
-    : ArrayAdapter<Movie>(context,
-    R.layout.listview_row, movies)
+class MovieListAdapter(private val moviesList: List<Movie>, val listener: (Movie) -> Unit)
+    : RecyclerView.Adapter<MovieListAdapter.MovieItemViewHolder>()
 {
 
     //view holder is used to prevent findViewById calls
-    private class MovieItemViewHolder {
-        internal var image: ImageView? = null
-        internal var title: TextView? = null
-        internal var duration: TextView? = null
-        internal var year: TextView? = null
-        internal var genre: TextView? = null
-        internal var rating: TextView? = null
+    inner class MovieItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val poster = itemView.findViewById<ImageView>(R.id.moviePosterImgView)
+        fun bind(movie: Movie, listener: (Movie) -> Unit) = with(itemView) {
+            Picasso.get().load(movie.posterId)
+                .centerCrop()
+                .fit()
+                .placeholder(R.drawable.ic_launcher_background)
+                .into(poster)
+            setOnClickListener { listener(movie) }
+        }
     }
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        var rowView: View? = convertView
-        val viewHolder: MovieItemViewHolder
-        val movie = movies[position]
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): MovieItemViewHolder {
+        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.movielist_row, viewGroup, false)
+        return MovieItemViewHolder(view)
+    }
 
-        if (rowView == null){
-            val inflater = context.layoutInflater
-            rowView = inflater.inflate(R.layout.listview_row, parent, false)
+    override fun getItemCount(): Int = moviesList.size
 
-            viewHolder =
-                MovieItemViewHolder()
-            viewHolder.title = rowView.findViewById<TextView>(R.id.movieTitle_txtView)
-            viewHolder.duration = rowView.findViewById<TextView>(R.id.duration_txtView)
-            viewHolder.year = rowView.findViewById<TextView>(R.id.year_txtView)
-            viewHolder.genre = rowView.findViewById<TextView>(R.id.genre_txtView)
-            viewHolder.rating = rowView.findViewById<TextView>(R.id.rating_txtView)
-            viewHolder.image = rowView.findViewById<ImageView>(R.id.moviePosterImgView)
-
-        }else{
-            viewHolder = rowView.tag as MovieItemViewHolder
-        }
-
-        viewHolder.title?.text = movie.title.toUpperCase(Locale.ENGLISH)
-        viewHolder.duration?.text = movie.runtime
-        viewHolder.year?.text = movie.releaseDate
-        viewHolder.genre?.text = movie.genres.joinToString(separator = " | ")
-        viewHolder.rating?.text = "${movie.rating}%"
-
-        Picasso.get().load(movie.posterId)
-            .transform(RoundedCornersTransformation(35, 0))
-            .centerCrop()
-            .fit()
-            .placeholder(R.drawable.ic_launcher_background)
-            .into(viewHolder.image)
-
-        rowView!!.tag = viewHolder
-        return rowView
+    override fun onBindViewHolder(holder: MovieItemViewHolder, position: Int) {
+        holder.bind(moviesList[position], listener)
     }
 }
